@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+*, ::before, :after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+img[alt=bg-desktop]{
+    position: fixed;
+    max-width: 100%;
+}
+
+.bg-image {
+    background: url('images/pattern-background-mobile.svg') no-repeat center/cover;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+body {
+    font-family: "Red Hat Display";
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    background-color: hsl(225, 100%, 94%);
+    font-size: 16px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27rem;
+    height: 41.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0px 14px 40px -20px rgba(0, 8, 26, 0.295);
+}
+
+img[alt="hero"] {
+    max-width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.info {
+    padding: 1rem 2.6rem 0 2.6rem;
+}
+
+img[alt=bg-mobile] {
+    display: none;
+}
+
+h3 {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin: 1.4rem 0 1.2rem 0;
+}
+
+p {
+    color: hsl(224, 23%, 55%);
+    line-height: 1.5rem;
+}
+
+.annual {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.plan {
+    display: flex;
+    background-color: hsl(225, 100%, 98%);
+    padding: 1.4rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plan .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan img {
+    margin-right: 0.9rem;
+}
+
+.plan p {
+    display: grid;
+}
+
+.plan a {
+    font-weight: 700;
+    align-items: center;
+    justify-content: right;
+    color: hsl(245, 70%, 55%);
+    transition: 0.4s;
+}
+
+.plan a:hover {
+    text-decoration: none;
+    color: hsl(245, 62%, 63%);
+}
+
+.btn {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 2.8rem;
+    font-weight: 700;
+    color: white;
+    background-color: hsl(245, 70%, 55%);
+    border: none;
+    box-shadow: 0px 20px 15px rgba(139, 136, 185, 0.329);
+    margin: 1rem 0 2rem 0;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: hsl(245, 62%, 63%);
+}
+
+.cancel {
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(224, 23%, 55%);
+    transition: .4s;
+}
+
+.cancel:hover {
+    color: hsl(221, 21%, 27%);
+}
+
+@media (min-width: 768px) {
+    .bg-image {
+        background: url('/images/pattern-background-desktop.svg') no-repeat center/cover;
+        height: 70vh;
+        top: -9rem;
+    }
+}
